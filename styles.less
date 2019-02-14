@@ -1,0 +1,159 @@
+@textColor: #dddddd;
+@primaryColor: #70CD71;
+@secondaryColor: #988AD5;
+@primaryFont: 'Josefin Sans', sans-serif;
+//@contentWidth : 1200px;
+
+
+html{
+ background:linear-gradient( rgba(0, 0, 0, 0.69) 100%, rgba(0, 0, 0, 0.69)100%),url('background.png');
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ background-attachment: fixed;
+}
+
+
+body{
+ //width: @contentWidth;
+ display: grid;
+ grid-template-columns: 1fr 3fr;
+}
+
+
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+
+a:link, a:visited {
+ color: @textColor;
+ text-decoration: none;
+}
+
+a:hover, a:active{
+ color: @primaryColor;
+}
+
+select{
+ background-color: @textColor;
+ border:none;
+ padding: 5px;
+ font-family: @primaryFont;
+ font-weight: 300;
+ option{
+  font-weight: 300;
+ }
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6{
+ font-weight: 300;
+}
+
+
+span{
+ font-size: 20px;
+ font-weight: 300;
+ color: @primaryColor;
+}
+
+
+ul{
+ display: grid;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+ul:first-child{
+ grid-template-rows: 1fr ;
+ li{
+  justify-items: center;
+ }
+}
+
+ul:last-child{
+ grid-template-rows: 1fr 1fr;
+ li{
+  justify-items: center;
+ }
+}
+
+
+li{
+ list-style: none;
+ padding: 5px ;
+ display: grid;
+ align-items: center;
+ border-top: 1px dashed ;
+}
+
+li:last-child{
+ border-bottom: 1px dashed ;
+}
+
+li:hover{
+ color: @primaryColor;
+ border:0.5px  @textColor dashed;
+}
+
+
+
+header{
+background-color: rgba(0, 0, 0, 0.91);
+align-items: start;
+}
+
+
+menu{
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 3fr 1fr 1fr 1fr;
+ padding: 0;
+ align-items: center;
+ menuitem{
+  align-items: center;
+ }
+ menuitem:nth-child(3){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ }
+ button,h1,p{
+  margin: 0;
+ }
+}
+
+
+header, main{
+ display: grid;
+ font-family: @primaryFont;
+ color: @textColor;
+ font-weight: 100;
+ padding: 50px;
+}
+
+
+
+main div{
+ display: grid;
+ grid-template-columns:1fr 2fr 2fr 1fr;
+ padding: 50px;
+ transform: rotate(1deg);
+}
+
+
+header hr, main hr{
+ border: 0.5px dashed;
+ transform: rotate(181deg);
+}
+
+
+
+
+
+
+
+
